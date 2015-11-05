@@ -427,9 +427,9 @@
       if (!data) $this.data('typeahead', (data = new Typeahead(this, options)));
       if (typeof option == 'string') {
         if (arg.length > 1) {
-          data[option].apply(data, Array.prototype.slice.call(arg ,1));
+          data.$element[option].apply(data, Array.prototype.slice.call(arg ,1));
         } else {
-          data[option]();
+          data.$element[option]();
         }
       }
     });
